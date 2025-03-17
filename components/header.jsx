@@ -1,6 +1,15 @@
+import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
+
 const Header = () => {
   return (
-    <div>Header</div>
+    <div>
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+    </div>
   );
 }
 

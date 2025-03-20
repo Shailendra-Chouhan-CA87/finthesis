@@ -9,7 +9,7 @@ const Header = () => {
     <div className=" fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b">
       <nav className=" container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/">
-          <Image src={"/logo.png"} alt="logo" height={60} width={200} className=" h-12 w-auto object-contain"/>
+          <Image src={"/logo.png"} alt="logo" height={60} width={200} className=" scale-125 mx-6 h-12 w-auto object-contain"/>
         </Link>
 
         <div className="flex items-center space-x-4 ">
@@ -17,14 +17,14 @@ const Header = () => {
             <Link href={"/dashboard"} className=" text-gray-600 hover:text-blue-600 flex items-center gap-2">
               <Button variant="outline">
                 <LayoutDashboard size={18} />
-                <span className="hidden md:inline">Dashboard</span>
+                <span className="hidden md:inline hover:cursor-pointer">Dashboard</span>
               </Button>
             </Link>
 
             <Link href={"/transaction/create"} className="flex items-center gap-2">
               <Button>
                 <PenBox size={18} />
-                <span className="hidden md:inline">Add Transaction</span>
+                <span className="hidden md:inline hover:cursor-pointer">Add Transaction</span>
               </Button>
             </Link>
 
@@ -32,7 +32,7 @@ const Header = () => {
 
           <SignedOut>
             <SignInButton forceRedirectUrl="/dashboard">
-              <Button variant="outline">Login</Button>
+              <Button variant="outline" className=" hover:cursor-pointer">Login</Button>
             </SignInButton>
           </SignedOut>
           <SignedIn>

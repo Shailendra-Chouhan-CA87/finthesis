@@ -37,10 +37,10 @@ function HeroSection() {
             </p>
             <div className="flex justify-center space-x-4">
                 <Link href="/dashboard">
-                    <Button size="lg" className="px-8">Get Started</Button>
+                    <Button size="lg" className="px-8 hover:cursor-pointer">Get Started</Button>
                 </Link>
                 <Link href="/">
-                    <Button size="lg" variant='outline' className="px-8">Watch demo</Button>
+                    <Button size="lg" variant='outline' className="px-8 hover:cursor-pointer">Watch demo</Button>
                 </Link>
             </div>
             <div className="hero-image-wrapper">

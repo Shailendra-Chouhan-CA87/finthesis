@@ -1,7 +1,7 @@
 import { BarLoader } from "react-spinners";
 import { Suspense } from "react";
 import DashboardPage from "./page";
-
+ 
 export default function Layout() {
   return (
     <div className="px-5">

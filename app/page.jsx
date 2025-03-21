@@ -10,7 +10,7 @@ export default function Home() {
     <div className="mt-40">
       {/* Hero Section */}
       <HeroSection />
-
+ 
       {/* States Data */}
       <section className="py-20 bg-blue-50">
         <div className="container mx-auto px-4">

@@ -87,7 +87,7 @@ const AddTransactionForm = ({accounts, categories}) => {
           toast.success("Receipt scanned successfully");
         }
       };
-
+ 
   return (
     <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
         {/* AI Reciept Scanner */}

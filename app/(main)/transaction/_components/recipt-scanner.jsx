@@ -6,7 +6,7 @@ import useFetch from '@/hooks/use-fetch';
 import { Camera, Loader2 } from 'lucide-react';
 import React, { useEffect, useRef } from 'react'
 import { toast } from 'sonner';
-
+ 
 const ReceiptScanner = ({ onScanComplete }) => {
     const fileInputRef = useRef(null);
     const {
@@ -26,7 +26,7 @@ const ReceiptScanner = ({ onScanComplete }) => {
     useEffect(() => {
         if (scannedData && !scanReceiptLoading) {
           onScanComplete(scannedData);
-          toast.success("Receipt scanned successfully");
+          //toast.success("Receipt scanned successfully");
         }
       }, [scanReceiptLoading, scannedData]);
 

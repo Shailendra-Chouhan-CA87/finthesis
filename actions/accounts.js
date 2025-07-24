@@ -101,11 +101,23 @@ const serializeTransaction = (obj) => {
       });
   
       // Group transactions by account to update balances
+      // const accountBalanceChanges = transactions.reduce((acc, transaction) => {
+      //   const change =
+      //     transaction.type === "EXPENSE"
+      //       ? transaction.amount
+      //       : -transaction.amount;
+      //   acc[transaction.accountId] = (acc[transaction.accountId] || 0) + change;
+      //   return acc;
+      // }, {});
+
       const accountBalanceChanges = transactions.reduce((acc, transaction) => {
+        if (!transaction.accountId) return acc;
+
         const change =
           transaction.type === "EXPENSE"
-            ? transaction.amount
-            : -transaction.amount;
+            ? Number(transaction.amount)
+            : -Number(transaction.amount);
+
         acc[transaction.accountId] = (acc[transaction.accountId] || 0) + change;
         return acc;
       }, {});

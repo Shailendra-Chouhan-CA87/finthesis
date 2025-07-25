@@ -144,7 +144,7 @@
 }
 
 .hero-image{
-  transform: rotateX(15deg) scale(1);
+  transform: rotateX(15deg) scale(0.9);
   transition: transform 0.5s ease-out;
   will-change: transform;
 }
